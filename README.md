@@ -1,4 +1,4 @@
-# Module 02 Challenge
+# Portfolio Template (Module 02 Challenge)
 
 This repository contains the HTML and CSS code for my first go at a portfolio website, made for the Module 02 Challenge.
 
