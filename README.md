@@ -6,7 +6,7 @@ This repository contains the HTML and CSS code for my first go at a portfolio we
 
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [What is it?](#what-is-it?)
+- [Description](#description)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
@@ -19,7 +19,7 @@ The HTML code in this repository functions as a mock portfolio for myself. As of
 
 N/A
 
-## What is it?
+## Description
 
 This challenge was meant to have us use things like flexbox and the other css tools we have learned to create an interactive website that is clean and responsive. This site
 uses interactive buttons to send users to each project, as well as give a basic introduction to myself with some contact info.
