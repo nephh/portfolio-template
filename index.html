@@ -6,6 +6,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
   </head>
 
   <body>
@@ -14,45 +15,92 @@
       <nav>
         <ul>
           <a href="#"><li>Home</li></a>
-          <a href="#"><li>Projects</li></a>
-          <a href="#"><li>About</li></a>
-          <a href="#"><li>Contact Me</li></a>
+          <a href="#repos"><li>Repos</li></a>
+          <a href="#about"><li>About</li></a>
+          <a href="#contact"><li>Contact Me</li></a>
         </ul>
       </nav>
     </header>
 
-    <main>
-        <aside>
-            <img src="./assets/images/chu-smiles.png" alt="avatar" />
-            <h2>Welcome!</h2>
-            <p>Feel free to check out my projects on the right, or get in contact with me at the bottom of the page!</p>
-          </aside>
+    <main id="repos">
+      <aside>
+        <img src="./assets/images/chu-smiles.png" alt="avatar" />
+        <h2>Welcome!</h2>
+        <p>
+          Feel free to check out my projects on the right, or get in contact
+          with me at the bottom of the page!
+        </p>
+      </aside>
       <article>
-        <section>
-          <header>Flexbox Row</header>
-          <p>Use these three properties to create a Flexbox row layout.</p>
-        </section>
-        <section>
-          <header>Flexbox Column</header>
-          <p>Use this to create a Flexbox column layout.</p>
-        </section>
-        <section>
-          <header>CSS Grid Layout</header>
-        </section>
-        <section>
-          <header>Linear Gradients</header>
-        </section>
-        <section>
-          <header>Box Transition Glow</header>
-        </section>
-        <section>
-          <header>Overlay Card</header>
-        </section>
+        <div class="buttons-group">         
+          <a href="https://nephh.github.io/module-01-challenge" class="buttons">
+            <h3>Module 01 Challenge</h3>
+            <img src="./assets/images/digital-marketing-meeting.jpg" id="first-project"/>
+            <div class="description">
+              <p>
+                This is my submission for the Module 01 Challenge. Clicking the
+                button above or the image below will take you to the deployed website. 
+                You can also find the repo on my Github page which is linked at the bottom of the page.
+              </p>
+            </div>
+          </a>
+          <a href="https://www.example2.com" class="buttons">
+            <h3>Example 2</h3>
+            <img src="./assets/images/sample.png" class="preview"/>
+            <div class="description">
+              <p>Additional content for Example 2.</p>
+            </div>
+          </a>
+          <a href="https://www.example3.com" class="buttons">
+            <h3>Example 3</h3>
+            <img src="./assets/images/sample.png" class="preview"/>
+            <div class="description">
+              <p>Additional content for Example 3.</p>
+            </div>
+          </a>
+          <a href="https://www.example3.com" class="buttons">
+            <h3>Example 4</h3>
+            <img src="./assets/images/sample.png" class="preview"/>
+            <div class="description">
+              <p>Additional content for Example 4.</p>
+            </div>
+          </a>
+          <a href="https://www.example3.com" class="buttons">
+            <h3>Example 5</h3>
+            <img src="./assets/images/sample.png" class="preview"/>
+            <div class="description">
+              <p>Additional content for Example 5.</p>
+            </div>
+          </a>
+          <a href="https://www.example3.com" class="buttons">
+            <h3>Example 6</h3>
+            <img src="./assets/images/sample.png" class="preview"/>
+            <div class="description">
+              <p>Additional content for Example 6.</p>
+            </div>
+          </a>
+        </div>
+      </article>
+      <article class="content">
+        <h4 id="about">About Me</h4>
+        <p id="about-text">
+          I am just beginning my journey as a web developer. I have some experience in a few programming languages and have dabbled in third party APIs such as 
+          Twitter and Discord. I am excited to continue to learn and grow my skills!
+        </p>
+        <h4 id="contact">Contact Me</h4>
+        <p>
+          Here's my information, feel free to contact me through email or phone!
+          <ul>
+            <li>Email: owenmccr@gmail.com</li>
+            <li>Phone Number: 111-111-1111</li>
+            <li>Github: <a href="https://github.com/nephh"> nephh </a></li>
+          </ul>
+        </p>
       </article>
     </main>
 
     <footer>
-      <span>Thanks for visiting!</span>
+      <span>Thank you for checking out my site!</span>
     </footer>
   </body>
 </html>

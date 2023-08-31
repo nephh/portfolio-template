@@ -1,11 +1,11 @@
-/* create custom CSS variables (also called custom properties) and apply them to the root of the page, making them accessible to all other CSS */
+/* declaring root variables */
 :root {
-  /* declare a variable with `--` syntax */
   --dark: #003e49;
   --light: #ffefef;
-  --navlink-color: #b9c6ae;
+  --link-color: #b9c6ae;
 }
 
+/* basic element styling */
 body {
   display: flex;
   flex-direction: column;
@@ -13,6 +13,8 @@ body {
   background-color: #e7fbff;
 }
 
+/* first case of using our variables, as well as things like z-index and some flex properties.
+  we also set the position to fixed so that the navbar will scroll with the page and is usable anywhere. */
 header {
   display: flex;
   justify-content: space-between;
@@ -21,6 +23,9 @@ header {
   background-color: var(--dark);
   color: var(--light);
   flex-direction: column;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }
 
 h1 {
@@ -33,6 +38,7 @@ h2 {
   font-size: 250%;
 }
 
+/* sidebar! decided to go with a fixed position so it will scroll with the page */
 aside {
     position: fixed;
     left: 20px;
@@ -44,6 +50,7 @@ aside {
     border-radius: 15px;
 }
 
+/* adding an avatar to the sidebar */
 aside img {
     display: flex;
     border-radius: 100%;
@@ -62,24 +69,30 @@ nav ul {
 
 nav a {
   background-color: unset;
-  color: var(--navlink-color);
+  color: var(--link-color);
   font-weight: bold;
   text-decoration: none;
 }
 
+/* nav bar text color on hover */
 nav a:hover {
   color: var(--light);
 }
 
+/* setting the basis of our page with flex */
 main {
   display: flex;
   flex: 1 1 0;
   max-width: 96%;
-  margin: 2% auto;
+  margin: 150px 50px auto;
+  flex-wrap: wrap;
 }
 
+/* main section positioning */
 article {
     margin-left: 430px;
+    border-left: 2px solid var(--dark);
+    padding-left: 100px;
 }
 
 article p {
@@ -95,6 +108,101 @@ footer {
   color: var(--light);
 }
 
+/* the button group, which is setting how the buttons are sorted and positioned with flex */
+.buttons-group {
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap;
+  width: auto;
+}
+
+/* the actual buttons styling. uses variables, positioning, as well as cursor and text decorations. */
+.buttons {
+  position: relative; 
+  display: inline-block; 
+  margin: 0px 50px; 
+  margin-bottom: 300px;
+  padding: 15px 30px; 
+  border: 2px solid var(--dark); 
+  background-color: var(--link-color); 
+  color: var(--dark); 
+  text-decoration: none; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+  width: 250px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* the description box that appears when each button is hovered over */
+.description {
+  position: absolute;
+  margin: 15px -104px;
+  display: none;
+  padding: 10px;
+  background-color: var(--link-color);
+  border: 1px solid var(--dark);
+  width: 400px;
+  z-index: 2;
+}
+
+/* showing the description box */
+.buttons:hover .description {
+  display: block;
+}
+
+/* Change background color on hover */
+.buttons:hover {
+  background-color: #f9f9f9;
+  color: var(--dark);
+}
+
+/* cursor change to show interactivity on photo */
+.preview {
+  cursor: pointer;
+}
+
+
+/* the rest of the css styling in this main section is for specific ids and header that just
+  needed a few changes */
+#first-project {
+  width: 430px;
+  height: auto;
+  display: flex;
+  position: absolute;
+  z-index: 0;
+  margin: 15px -160px;
+  border: 2px solid var(--dark);
+  border-radius: 2%;
+}
+
+.preview {
+  display: flex;
+  position: absolute;
+  width: 300px;
+  height: auto;
+  z-index: 0;
+  margin: 15px -56px;
+  border: 2px solid var(--dark);
+  border-radius: 2%;
+}
+
+.content {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+h4 {
+  text-align: center;
+  font-size: 150%;
+  margin-bottom: 40px;
+}
+
+#about-text {
+  margin-bottom: 50px;
+}
+
+/* changing some styling so that the site is cohesive and functional at a handheld device screen width. */
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
@@ -102,5 +210,36 @@ footer {
 
   main {
     max-width: 1200px;
+    flex-direction: column;
+    margin: 125px 50px auto;
+  }
+
+  aside {
+    display: none;
+  }
+
+  article {
+    margin: 0px 2%;
+    border: none;
+    padding: 0;
+  }
+
+  #first-project {
+    margin: 15px -124px;
+  }
+
+  .content {
+    text-align: center;
+    margin: auto;
+  }
+
+  .preview {
+    margin: 15px -101px;
+    width: 386px;
+  }
+
+  footer {
+    margin-top: 2%;
+    padding: 3%;
   }
 }
