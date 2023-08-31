@@ -26,7 +26,7 @@ uses interactive buttons to send users to each project, as well as give a basic 
 
 ## Usage
 
-See commented lines in the HTML and CSS files to see exactly what is going on under the hood. Website is hosted [here.](https://nephh.github.io/portfolio-template)
+See commented lines in the HTML and CSS files to see exactly what is going on under the hood. Hover over any image or button to see a description of the project, and click to go to the deployed site. Website is hosted [here.](https://nephh.github.io/portfolio-template)
 
 ### Website Screenshot
 
